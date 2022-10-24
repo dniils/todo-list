@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::selection {
+  color: #fff;
+  background: #000;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #000, #1d7a00, #00ff1a);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #000;
+  font-size: 1rem;
+  border-bottom: 1px solid #fff;
+  padding-left: 1rem;
+}
+
+.todo-form {
+  //   font-size: 1.5rem;
+  //   min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: 0;
+    outline: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 20px;
+  }
+
+  &__button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: 0;
+    outline: 0;
+    color: #000;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      i {
+        scale: 1.2;
+      }
+    }
+
+    i {
+      transition: all 0.15s ease-out;
+    }
+  }
+}
+
+.todo-container {
+  margin-top: 2rem;
+  .todo {
+    list-style-type: none;
+    color: #000;
+
+    &__item {
+      background-color: #fff;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      display: flex;
+      margin-bottom: 1rem;
+      border-radius: 20px;
+    }
+    &__text {
+      flex: 1;
+      padding-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    &__complete-button,
+    &__trash-button {
+      padding: 1rem 0;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      font-size: 1.5rem;
+      width: 60px;
+      color: #fff;
+      background-color: #104600;
+      font-size: 2rem;
+      transition: all 0.15s ease-in;
+      &:hover {
+        background-color: #249900;
+        cursor: pointer;
+        i {
+          font-size: 1.8rem;
+        }
+      }
+      i {
+        font-size: 1.5rem;
+        transition: all 0.15s ease-in;
+      }
+    }
+    &__trash-button {
+      background-color: rgb(170, 0, 0);
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      transition: all 0.15s ease-in;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}
