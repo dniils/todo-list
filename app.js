@@ -17,9 +17,15 @@ function addTodo(event) {
 
   // create li
   const newTodo = document.createElement("li");
-  newTodo.innerText = "this is inner text of li";
   newTodo.classList.add("todo__text");
   todoDiv.appendChild(newTodo);
+
+  // get text from input & check for spaces
+  if (todoInput.value.trim()) {
+    newTodo.innerText = todoInput.value;
+  } else {
+    return;
+  }
 
   // check mark button
   const completedButton = document.createElement("button");
@@ -35,4 +41,7 @@ function addTodo(event) {
 
   // Append to <ul class="todo"></ul>
   todo.appendChild(todoDiv);
+
+  // Clear input after click
+  todoInput.value = "";
 }
