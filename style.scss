@@ -59,8 +59,10 @@ header {
     border-bottom-right-radius: 20px;
     cursor: pointer;
     box-shadow: 0 3px 8px #0000003d;
+    transition: all 0.15s ease-out;
 
     &:hover {
+      box-shadow: 0 3px 8px #0000008a;
       i {
         scale: 1.2;
       }
@@ -108,9 +110,11 @@ header {
       font-size: 2rem;
       transition: all 0.15s ease-in;
       box-shadow: 0 3px 8px #0000003d;
+
       &:hover {
         background-color: #249900;
         cursor: pointer;
+        box-shadow: 0 3px 8px #0000008a;
         i {
           color: #000;
           font-size: 1.8rem;
@@ -119,6 +123,7 @@ header {
       i {
         font-size: 1.5rem;
         transition: all 0.15s ease-in;
+        pointer-events: none;
       }
     }
     &__trash-button {
@@ -129,6 +134,11 @@ header {
       &:hover {
         background-color: red;
       }
+    }
+
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
     }
   }
 }
